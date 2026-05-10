@@ -1,0 +1,412 @@
+:root {
+  --rdx-bg: #090909;
+  --rdx-card: #121212;
+  --rdx-border: #222;
+  --rdx-accent: #ff0055;
+  --rdx-accent-hover: #d40047;
+  --rdx-text: #fff;
+  --rdx-muted: #888;
+}
+
+.redux-page {
+  background-color: var(--rdx-bg);
+  padding-top: 100px;
+  color: var(--rdx-text);
+}
+
+.redux-container {
+  margin-bottom: 50px;
+}
+
+/* Шапка и статы */
+.server-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: var(--rdx-muted);
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+}
+
+.server-stats b {
+  color: var(--rdx-text);
+}
+
+.server-stats i {
+  color: var(--rdx-accent);
+  font-size: 0.7rem;
+}
+
+.redux-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--rdx-accent);
+  margin-bottom: 5px;
+}
+
+.redux-subtitle {
+  text-align: center;
+  color: var(--rdx-muted);
+  margin-bottom: 40px;
+}
+
+/* Лейаут каталога */
+.redux-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Сайдбар */
+.redux-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.sidebar-block {
+  background: var(--rdx-card);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--rdx-border);
+}
+
+.sidebar-block h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.search-box {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+
+.filter-btn {
+  width: 100%;
+  background: #1a1a1a;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.filter-btn .right {
+  margin-left: auto;
+  color: var(--rdx-muted);
+}
+
+.premium-banner {
+  background: linear-gradient(135deg, #2a0010, #121212);
+  border: 1px solid var(--rdx-accent);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.premium-banner h4 {
+  color: var(--rdx-accent);
+  margin-bottom: 15px;
+}
+
+.premium-banner ul {
+  list-style: none;
+  color: var(--rdx-muted);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.btn-buy {
+  background: var(--rdx-accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Сетка модов */
+.redux-grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.mod-card {
+  background: var(--rdx-card);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border: 1px solid var(--rdx-border);
+  transition: 0.3s;
+}
+
+.mod-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--rdx-accent);
+}
+
+.mod-image {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.mod-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--rdx-accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.badge.premium {
+  background: #ffaa00;
+  color: #000;
+  left: auto;
+  right: 10px;
+}
+
+.mod-info {
+  padding: 15px;
+}
+
+.mod-tag {
+  color: var(--rdx-accent);
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.mod-name {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.mod-meta {
+  display: flex;
+  gap: 15px;
+  color: var(--rdx-muted);
+  font-size: 0.85rem;
+}
+
+/* Страница детали мода (2 скрин) */
+.back-link {
+  display: inline-block;
+  color: var(--rdx-muted);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  color: white;
+}
+
+.mod-detail-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.mod-gallery {
+  flex: 2;
+}
+
+.main-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.main-image img {
+  width: 100%;
+  display: block;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.thumbnail-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.thumbnail-list img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.thumbnail-list img.active,
+.thumbnail-list img:hover {
+  opacity: 1;
+  border: 2px solid var(--rdx-accent);
+}
+
+.mod-download-card {
+  flex: 1;
+  background: var(--rdx-card);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid var(--rdx-border);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mod-title-large {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.mod-stats-row {
+  display: flex;
+  gap: 15px;
+  color: var(--rdx-muted);
+  font-size: 0.9rem;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.video-review {
+  color: var(--rdx-accent);
+  text-decoration: none;
+  border: 1px solid var(--rdx-accent);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.download-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.lock-text {
+  font-size: 0.8rem;
+  color: var(--rdx-muted);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.btn-main-action {
+  width: 100%;
+  background: var(--rdx-accent);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-secondary {
+  width: 100%;
+  background: transparent;
+  color: var(--rdx-muted);
+  border: 1px solid var(--rdx-border);
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #222;
+  color: white;
+}
+
+.mod-description {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.mod-features {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.mod-features li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mod-features i {
+  color: var(--rdx-accent);
+}
+
+/* Адаптация */
+@media (max-width: 992px) {
+
+  .redux-layout,
+  .mod-detail-layout {
+    flex-direction: column;
+  }
+
+  .redux-sidebar {
+    width: 100%;
+  }
+}
+
+

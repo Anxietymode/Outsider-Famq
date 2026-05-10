@@ -1,0 +1,449 @@
+/* Отступы контента */
+.main-content {
+    padding-top: 120px; /* Чтобы не слипалось с шапкой */
+    padding-bottom: 60px;
+}
+
+/* Навигация */
+.navigation-top {
+    margin-bottom: 25px;
+}
+.back-link {
+    color: #888;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+.back-link:hover { color: #ff0055; }
+
+/* Карточка справа */
+.mod-sidebar-card {
+    background: #111; /* Темный фон как на фото */
+    border: 1px solid #222;
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяет контент (кнопка будет внизу) */
+    min-height: 520px; /* Чтобы блок был длинным и красивым */
+}
+
+.category {
+    color: #ff0055;
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+}
+.premium-tag {
+    background: #ffaa00;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.mod-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0;
+    color: #fff;
+}
+
+.mod-stats {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+}
+.video-btn { color: #ff0055; text-decoration: none; }
+
+/* Текст описания */
+.mod-description-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #eee;
+}
+.mod-description-block p {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.features-list li {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+.features-list i { color: #ff0055; margin-right: 8px; }
+
+/* СЕКЦИЯ КНОПКИ (НИЗ) */
+.action-footer {
+    margin-top: auto; /* Прижимает этот блок к самому низу карточки */
+    padding-top: 30px;
+}
+
+.lock-text {
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.btn-download-ultra {
+    display: block;
+    background: #ff0055; /* Яркий красный */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(255, 0, 85, 0.3);
+}
+
+.btn-download-ultra:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 0, 85, 0.5);
+    background: #ff1a6b;
+}
+
+.btn-share-alt {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-share-alt:hover { background: #222; color: #fff; }
+
+/* Фикс слайдера */
+.main-slide {
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.main-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.img-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+/* МИНИАТЮРЫ */
+.thumbnails-wrapper {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.thumb {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumb:hover { opacity: 0.8; }
+
+.thumb.active {
+    opacity: 1;
+    border-color: #ff0055;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+}
+
+/* КНОПКИ И ОПИСАНИЕ */
+.mod-sidebar {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.mod-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.btn-download-main {
+    background: linear-gradient(90deg, #ff0055, #ff0080);
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-download-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 0, 85, 0.5);
+}
+
+/* Описание */
+.mod-description {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+.redux-page {
+    background: #0b0b0b;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.mod-detail-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Оптимальное соотношение сторон */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* СЛАЙДЕР */
+.slider-container {
+    width: 100%;
+}
+
+.main-slide {
+    position: relative;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 0, 85, 0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.main-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.img-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+}
+
+/* МИНИАТЮРЫ (Уменьшенные фото) */
+.thumbnails-wrapper {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.thumb {
+    width: 85px; /* Уменьшенный размер */
+    height: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumb:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+}
+
+.thumb.active {
+    opacity: 1;
+    border-color: #ff0055;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+}
+
+/* КНОПКИ И КАРТОЧКА */
+.mod-sidebar {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid #222;
+    padding: 35px;
+    border-radius: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.btn-download-main {
+    background: linear-gradient(90deg, #ff0055, #ff0080);
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-download-main:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 0, 85, 0.5);
+}
+/* УМЕНЬШЕННЫЙ БЛОК ИНСТРУКЦИИ */
+.instruction-section {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Прижимаем к левому краю, как галерею */
+}
+
+.instruction-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px; /* Чуть меньше скругление */
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Ограничили ширину, чтобы не было на весь экран */
+}
+
+.instruction-header {
+    padding: 12px 20px; /* Уменьшили отступы */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.instr-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.instr-title i {
+    font-size: 1.1rem; /* Меньше иконка */
+    color: #ff0055;
+    background: rgba(255, 0, 85, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.instr-title h4 {
+    margin: 0;
+    font-size: 0.9rem; /* Меньше заголовок */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.instr-title span {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.instruction-body {
+    padding: 20px 25px; /* Компактные отступы внутри */
+    color: #aaa;
+    font-size: 0.85rem; /* Уменьшили общий шрифт */
+    line-height: 1.5;
+}
+
+.instruction-body h5 {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 0.95rem;
+}
+
+.instruction-body ol {
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+
+.instruction-body li {
+    margin-bottom: 5px;
+}
+
+.paths-list li {
+    background: #080808;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    border: 1px solid #1a1a1a;
+}
+
+.code {
+    color: #ff0055;
+    font-family: 'Consolas', monospace;
+    display: block;
+    margin-top: 4px;
+    word-break: break-all; /* Чтобы длинные пути не вылезали */
+}
+
+.warning-text {
+    background: rgba(255, 170, 0, 0.03);
+    border-left: 3px solid #ffaa00;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    margin: 15px 0;
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Адаптация под мобилки */
+@media (max-width: 992px) {
+    .mod-detail-layout { grid-template-columns: 1fr; }
+    .thumb { width: 70px; height: 45px; }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моды | Outside</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/redux.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="redux-page">
+
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Outside-Famq</span>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Главная</a>
+                <a href="../tiers/players.html" class="nav-link">Тиры</a>
+                <a href="catalog.html" class="nav-link active">Моды</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container redux-container">
+        <div class="server-stats">
+            <span>Majestic RP <b>17 126</b></span>
+            <i class="fa-solid fa-xmark"></i>
+            <span><b>22 044</b> GTA 5 RP</span>
+        </div>
+
+        <h1 class="redux-title">МОДЫ</h1>
+        <p class="redux-subtitle">Найдите идеальный мод для вашей игры</p>
+
+        <div class="redux-layout">
+            <main class="redux-grid">
+                
+                <a href="./percos.html" class="mod-card">
+                    <div class="mod-image">
+                        <span class="badge new">+ NEW</span>
+                        <img src="./css/img/Gemini_Generated_Image_4t446c4t446c4t44.png" alt="Redux">
+                    </div>
+                    <div class="mod-info">
+                        <span class="mod-tag"># РЕДУКСЫ</span>
+                        <h3 class="mod-name">BEST REDUX BY-Percos</h3>
+                        <div class="mod-meta">
+
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./gunpac.html" class="mod-card">
+                    <div class="mod-image">
+                        <span class="badge new">+ NEW</span>
+                        <img src="./css/img/image-gp.png" alt="Gunpack">
+                    </div>
+                    <div class="mod-info">
+                        <span class="mod-tag"># ГАНПАКИ</span>
+                        <h3 class="mod-name">detection v2 gp</h3>
+                        <div class="mod-meta">
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./newa.html" class="mod-card">
+                    <div class="mod-image">
+                        <img src="./css/img/Gemini_Generated_Image_r1su7pr1su7pr1su.png" alt="Soundpack">
+                    </div>
+                    <div class="mod-info">
+                        <span class="mod-tag"># РЕДУКСЫ</span>
+                        <h3 class="mod-name">Newa-Sborka</h3>
+                        <div class="mod-meta">
+                        </div>
+                    </div>
+                </a>
+
+            </main>
+        </div>
+    </div>
+<script>
+function changeImage(element, index) {
+    // 1. Меняем главное фото
+    const mainImg = document.getElementById('current-img');
+    mainImg.style.opacity = '0'; // Эффект затухания
+    
+    setTimeout(() => {
+        mainImg.src = element.src;
+        mainImg.style.opacity = '1';
+    }, 200);
+
+    // 2. Обновляем счетчик
+    document.getElementById('current-idx').innerText = index;
+
+    // 3. Меняем активную миниатюру
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    element.classList.add('active');
+}
+</script>
+</body>
+</html>

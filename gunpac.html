@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обзор мода | Outside-Famq</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./redux2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="redux-page">
+    <header class="header">
+        </header>
+<main class="main-content">
+    <div class="container">
+        <div class="navigation-top">
+            <a href="catalog.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Назад к модам
+            </a>
+        </div>
+
+        <div class="mod-detail-layout">
+            <div class="mod-gallery">
+                <div class="main-slide">
+                    <img src="./css/img/image-gp.png" id="main-photo" alt="Main View">
+                    <div class="img-counter"><span id="current-idx">1</span> / 4</div>
+                </div>
+                
+                <div class="thumbnails-wrapper">
+                    <img src="./css/img/image-gp.png" class="thumb active" onclick="changeImage(this, 1)">
+                </div>
+            </div>
+
+            <aside class="mod-sidebar-card">
+                <div class="mod-header">
+                    <span class="category"># GUNPACK <mark class="premium-tag">PREMIUM</mark></span>
+                    <h1 class="mod-title">BEST REDUX & By-Percos</h1>
+                </div>
+
+
+                <div class="mod-description-block">
+                    <h3>Описание</h3>
+                    <p>Обновление старых редуксов для Majestic. Исправлены баги со смоками и улучшена общая производительность для слабых ПК.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Оптимизация FPS</li>
+                        <li><i class="fa-solid fa-check"></i> Новое небо</li>
+                        <li><i class="fa-solid fa-check"></i> Картошка графика </li>
+                        <li><i class="fa-solid fa-check"></i> Залазы </li>
+                    </ul>
+                </div>
+
+                <div class="action-footer">
+                    <a href="https://drive.google.com/file/d/1KQTzZPPdoQWldVRFsiX0fCedaACHGILw/view" class="btn-download-ultra">СКАЧАТЬ</a>
+                    <button class="btn-share-alt"><i class="fa-solid fa-share-nodes"></i> Поделиться</button>
+                </div>
+                
+            </aside>
+            <div class="instruction-section">
+    <div class="instruction-card">
+        <div class="instruction-header">
+            <div class="instr-title">
+                <i class="fa-solid fa-book-open"></i>
+                <div>
+                    <h4>ИНСТРУКЦИЯ</h4>
+                    <span>Как установить мод</span>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-up toggle-icon"></i>
+        </div>
+        
+        <div class="instruction-body">
+            <h5>Установка:</h5>
+            <ol>
+                <li>Распакуйте скачанный архив</li>
+                <li>Найдите корневую папку игры GTA V на вашем компьютере</li>
+                <li>Откройте папку <span class="path-highlight">"update"</span> внутри корневой папки игры</li>
+                <li>Скопируйте все файлы из распакованного архива в папку <span class="path-highlight">"update"</span></li>
+                <li>При необходимости подтвердите замену файлов</li>
+            </ol>
+
+            <h5>Пример полного пути для каждой версии:</h5>
+            <ul class="paths-list">
+                <li><strong>Social Club:</strong> <span class="code">C:\Program Files (x86)\Rockstar Games\Grand Theft Auto V\update\</span></li>
+                <li><strong>Steam:</strong> <span class="code">C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\update\</span></li>
+                <li><strong>Epic Games:</strong> <span class="code">C:\Program Files\Epic Games\GTAV\update\</span></li>
+            </ul>
+
+            <p class="warning-text">
+                <strong>Важно:</strong> Если в вашей игре уже есть файлы с такими же названиями, рекомендуется сделать их резервную копию перед заменой.
+            </p>
+            <p class="footer-note">После установки файлов в папку <span class="path-highlight">"update"</span> запустите игру обычным способом.</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function changeImage(element, index) {
+        const mainImg = document.getElementById('main-photo');
+        mainImg.style.opacity = '0.4';
+        setTimeout(() => {
+            mainImg.src = element.src;
+            document.getElementById('current-idx').innerText = index;
+            mainImg.style.opacity = '1';
+        }, 150);
+        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+        element.classList.add('active');
+    }
+</script>
+</body>
+</html>
